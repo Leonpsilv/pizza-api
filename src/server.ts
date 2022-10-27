@@ -1,6 +1,7 @@
 import * as express from 'express';
 import * as dotenv from 'dotenv';
 import {router} from './routes/public';
+import {dbConnect} from './config/db';
 
 // config
 dotenv.config();
@@ -9,6 +10,9 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
+// db
+dbConnect();
 
 // routes
 app.use(router);

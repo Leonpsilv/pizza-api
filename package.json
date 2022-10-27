@@ -18,6 +18,7 @@
       "typeorm": "0.3.10"
    },
    "scripts": {
+      "db": "docker-compose up -d",
       "dev": "nodemon --exec ts-node src/server.ts",
       "start": "ts-node src/index.ts",
       "typeorm": "typeorm-ts-node-commonjs"
